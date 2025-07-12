@@ -1,0 +1,9 @@
+1- npm init -y
+2- npm i express
+3- npm i --save-dev nodemon
+//to restart the server anytime you make changes must be done on the package.js file
+ 4- "devStart": "nodemon server.js"
+ //to run all the code on our server js
+ 5- npm run devStart 
+ //cause we don't have an engine view setup
+ 6-npm i ejs
