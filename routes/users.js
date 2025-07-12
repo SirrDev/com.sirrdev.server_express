@@ -8,7 +8,20 @@ router.get("/", (req, res) => {
 })
 
 router.get("/new", (req, res) => {
-    res.send("user new form")
+    res.render("users/new")
+})
+
+router.post("/", (req, res) => {
+    const isValid = false
+    if(isValid){
+        users.push({firstName: req.body.firstName})
+        res.redirect('/users/${users.length - 1}')
+    }else{
+        console.log("Error")
+        res.render('users/new', {firstName: req.body.firstName})
+    }
+
+    res.send("Hi")
 })
 
 router
